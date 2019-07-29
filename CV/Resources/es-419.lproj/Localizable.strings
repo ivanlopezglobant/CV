@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  CV
+
+  Created by Ivan Erwin Lopez Ansaldo on 7/23/19.
+  Copyright © 2019 Ivan Erwin Lopez Ansaldo. All rights reserved.
+*/
+
+/* Scolar education */
+"Education" = "Educación";
+
+/* Professional Experience */
+"Experience" = "Experiencia";
+
+/* Personal Skills */
+"Skills" = "Habilidades";
+
+/* Known Languages */
+"Language" = "Idiomas";
+
+/* Technical Languages for programming */
+"Programming Language" = "Lenguajes de Programación";
+
+/* Start downloading data */
+"Start Downloading Data" = "Descargando Datos";
+
+/* Did Recive data */
+"Successful Download" = "Descarga Exitosa";
+
+/* Did not Recive data */
+"Download Failed" = "Descarga Fallida";
+
+/* Try do something again */
+"Try again" = "Intenta de nuevo";
+
+/* Error requesting service */
+"Request Failed" = "Solicitud fallida";
+
+/* Data is not valid */
+"Invalid Data" = "Datos Inválidos";
+
+/* Response of service not satisfactory */
+"Response Unsuccessful" = "Respuesta Fallida";
+
+/* Error parsing data in model */
+"JSON Parsing Failure" = "Falla JSON";
+
+/* Could not make JSON conversion */
+"JSON Conversion Failure" = "Falla JSON";
+
+/* Years old of a person */
+"years" = "años";

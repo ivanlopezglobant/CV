@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import CV
 
 class CVUITests: XCTestCase {
 
@@ -18,6 +17,31 @@ class CVUITests: XCTestCase {
         app = XCUIApplication()
         app.launch()
     }
+    
+    var currentLanguage: (langCode: String, localeCode: String)? {
+        let currentLocale = Locale(identifier: Locale.preferredLanguages.first!)
+        guard let langCode = currentLocale.languageCode else {
+            return nil
+        }
+        var localeCode = langCode
+        if let scriptCode = currentLocale.scriptCode {
+            localeCode = "\(langCode)-\(scriptCode)"
+        } else if let regionCode = currentLocale.regionCode {
+            localeCode = "\(langCode)-\(regionCode)"
+        }
+        return (langCode, localeCode)
+    }
+    
+    func localizedString(_ key: String) -> String {
+        let testBundle = Bundle(for: CVUITests.self)
+        if let currentLanguage = currentLanguage,
+            let testBundlePath = testBundle.path(forResource: currentLanguage.localeCode, ofType: "lproj") ?? testBundle.path(forResource: currentLanguage.langCode, ofType: "lproj"),
+            let localizedBundle = Bundle(path: testBundlePath)
+        {
+            return NSLocalizedString(key, bundle: localizedBundle, comment: "")
+        }
+        return "?"
+    }
 
     func testEducationLabelExists() {
         // Given
@@ -27,7 +51,7 @@ class CVUITests: XCTestCase {
         }
         wait(for: [expectation], timeout: 4)
         // When
-        let educationLabel = app.staticTexts["Education"]
+        let educationLabel = app.staticTexts[localizedString("Education")]
         // Then
         XCTAssertTrue(educationLabel.exists)
     }
@@ -40,7 +64,7 @@ class CVUITests: XCTestCase {
         }
         wait(for: [expectation], timeout: 4)
         // When
-        let experienceLabel = app.staticTexts["Experience"]
+        let experienceLabel = app.staticTexts[localizedString("Experience")]
         // Then
         XCTAssertTrue(experienceLabel.exists)
     }
@@ -54,7 +78,7 @@ class CVUITests: XCTestCase {
         wait(for: [expectation], timeout: 4)
         // When
         app.swipeUp()
-        let skillsLabel = app.staticTexts["Skills"]
+        let skillsLabel = app.staticTexts[localizedString("Skills")]
         // Then
         XCTAssertTrue(skillsLabel.exists)
     }
@@ -68,7 +92,7 @@ class CVUITests: XCTestCase {
         wait(for: [expectation], timeout: 4)
         // When
         app.swipeUp()
-        let languagesLabel = app.staticTexts["Languages"]
+        let languagesLabel = app.staticTexts[localizedString("Language")]
         // Then
         XCTAssertTrue(languagesLabel.exists)
     }
@@ -82,7 +106,7 @@ class CVUITests: XCTestCase {
         wait(for: [expectation], timeout: 4)
         // When
         app.swipeUp()
-        let programmingLanguagesLabel = app.staticTexts["Programming Languages"]
+        let programmingLanguagesLabel = app.staticTexts[localizedString("Programming Language")]
         // Then
         XCTAssertTrue(programmingLanguagesLabel.exists)
     }

@@ -9,12 +9,12 @@
 import UIKit
 
 enum AppConstants {
-    static let mainStoryboard = "Main"
+    static let infoStoryboard = "Info"
     static let curriculum = "Curriculum"
-    static let initialLoaderViewController = "InitialLoaderViewController"
-    static let current = "Current"
+    static let current = NSLocalizedString("Current", comment: "Actual Time")
     static let tryAgain = NSLocalizedString("Try again", comment: "Try do something again")
     static let years = NSLocalizedString("years", comment: "Years old of a person")
+    
     enum Color {
         static let main = #colorLiteral(red: 0.0227721706, green: 0.3414700627, blue: 0.3582882881, alpha: 1)
         static let secondary = #colorLiteral(red: 0.3996318579, green: 0.6436505914, blue: 0.6731247306, alpha: 1)

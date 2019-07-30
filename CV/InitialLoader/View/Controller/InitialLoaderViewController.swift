@@ -46,7 +46,7 @@ class InitialLoaderViewController: UIViewController {
     
     @objc private func didTapTryAgain() {
         update(status: .initial, cv: nil, error: nil)
-        presenter?.viewDidLoad()
+        presenter?.prepareSubViews()
     }
     
     override func viewDidLoad() {
@@ -57,7 +57,7 @@ class InitialLoaderViewController: UIViewController {
         view.addSubview(tryAgain)
         setupLayout()
         
-        presenter?.viewDidLoad()
+        presenter?.prepareSubViews()
     }
     
     private func setupLayout() {

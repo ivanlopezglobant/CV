@@ -50,3 +50,6 @@
 
 /* Years old of a person */
 "years" = "years";
+
+/* Actual Time */
+"Current" = "Current";

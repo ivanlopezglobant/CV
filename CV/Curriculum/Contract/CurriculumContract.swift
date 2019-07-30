@@ -19,7 +19,7 @@ protocol CurriculumPresenterProtocol {
     var router: CurriculumRouterProtocol? {get set}
     
     //View -> Presenter
-    func viewDidLoad()
+    func prepareSubViews()
     
     func getNumberOfSections() -> Int
     func getTitleSection(at index: Int) -> String

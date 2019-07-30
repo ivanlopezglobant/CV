@@ -13,7 +13,7 @@ class InfoPresenter: InfoPresenterProtocol {
     var router: InfoRouterProtocol?
     var person: Person?
     
-    func viewDidLoad() {
+    func prepareSubViews() {
         view?.showInfo()
     }
     

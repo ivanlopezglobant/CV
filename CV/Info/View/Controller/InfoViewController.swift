@@ -23,7 +23,7 @@ class InfoViewController: UIViewController, InfoViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        presenter?.viewDidLoad()
+        presenter?.prepareSubViews()
     }
     
     func showInfo() {

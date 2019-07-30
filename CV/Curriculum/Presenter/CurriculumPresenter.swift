@@ -16,7 +16,7 @@ class CurriculumPresenter: CurriculumPresenterProtocol {
     }
     var availableSections: [CVSections] = []
     
-    func viewDidLoad() {
+    func prepareSubViews() {
         view?.showCV(with: cv!)
     }
     

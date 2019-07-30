@@ -17,7 +17,7 @@ protocol InfoPresenterProtocol {
     var router: InfoRouterProtocol? {get set}
     
     //View -> Presenter
-    func viewDidLoad()
+    func prepareSubViews()
     func getFullName() -> String?
     func getAge() -> String?
     func getCountry() -> String?

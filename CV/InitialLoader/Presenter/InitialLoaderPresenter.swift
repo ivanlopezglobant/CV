@@ -14,7 +14,7 @@ final class InitialLoaderPresenter: InitialLoaderPresenterProtocol {
     var view: InitialLoaderViewProtocol?
     var router: InitialLoaderRouterProtocol?
     
-    func viewDidLoad() {
+    func prepareSubViews() {
         interactor?.getCurriculum()
     }
     

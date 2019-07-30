@@ -22,7 +22,7 @@ protocol InitialLoaderPresenterProtocol {
     var router: InitialLoaderRouterProtocol? {get set}
     
     //View -> Presenter
-    func viewDidLoad()
+    func prepareSubViews()
     func showCurriculum(with cv: Curriculum, from view: UIViewController)
 }
 

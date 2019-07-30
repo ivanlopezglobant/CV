@@ -55,7 +55,7 @@ class CurriculumViewController: UITableViewController, CurriculumViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.viewDidLoad()
+        presenter?.prepareSubViews()
         configureNavBar()
 
         containerHeader.addSubview(profileImage)

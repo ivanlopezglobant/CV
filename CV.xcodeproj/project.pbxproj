@@ -28,6 +28,7 @@
 		175460B722E7B89200FE8A02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175460B922E7B89200FE8A02 /* Localizable.strings */; };
 		177B369D22E8A34E002CD577 /* CVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B369C22E8A34E002CD577 /* CVUITests.swift */; };
 		1787DDB822F0B64500E3746C /* InfoPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787DDB722F0B64500E3746C /* InfoPresenterTest.swift */; };
+		1787DDBE22F0C1BD00E3746C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175460B922E7B89200FE8A02 /* Localizable.strings */; };
 		17D14F8122F08A7100ECC75D /* InitialLoaderConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8022F08A7100ECC75D /* InitialLoaderConfigurator.swift */; };
 		17D14F8322F08A8900ECC75D /* CurriculumConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8222F08A8900ECC75D /* CurriculumConfigurator.swift */; };
 		17D14F8622F08A9B00ECC75D /* InfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8522F08A9B00ECC75D /* InfoConfigurator.swift */; };
@@ -565,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1787DDBE22F0C1BD00E3746C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

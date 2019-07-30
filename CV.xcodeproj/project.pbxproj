@@ -17,7 +17,6 @@
 		173CC59122E6116F00538BB3 /* CurriculumRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173CC59022E6116F00538BB3 /* CurriculumRouter.swift */; };
 		173CC59322E611BB00538BB3 /* CurriculumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173CC59222E611BB00538BB3 /* CurriculumPresenter.swift */; };
 		173CC59622E611F500538BB3 /* CurriculumContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173CC59522E611F500538BB3 /* CurriculumContract.swift */; };
-		173CC59722E63A4600538BB3 /* Curriculum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173CC59922E63A4600538BB3 /* Curriculum.storyboard */; };
 		1741A70022E4A048008E2A90 /* CurriculumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1741A6FF22E4A048008E2A90 /* CurriculumModel.swift */; };
 		174457D522E21037001BBF9A /* InitialLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174457D422E21037001BBF9A /* InitialLoaderViewController.swift */; };
 		174457D722E21156001BBF9A /* InitialLoaderInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174457D622E21156001BBF9A /* InitialLoaderInteractor.swift */; };
@@ -70,8 +69,6 @@
 		173CC59022E6116F00538BB3 /* CurriculumRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumRouter.swift; sourceTree = "<group>"; };
 		173CC59222E611BB00538BB3 /* CurriculumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumPresenter.swift; sourceTree = "<group>"; };
 		173CC59522E611F500538BB3 /* CurriculumContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumContract.swift; sourceTree = "<group>"; };
-		173CC59822E63A4600538BB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Curriculum.storyboard; sourceTree = "<group>"; };
-		173CC59A22E63A8600538BB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Curriculum.strings"; sourceTree = "<group>"; };
 		1741A6FF22E4A048008E2A90 /* CurriculumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumModel.swift; sourceTree = "<group>"; };
 		174457D422E21037001BBF9A /* InitialLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderViewController.swift; sourceTree = "<group>"; };
 		174457D622E21156001BBF9A /* InitialLoaderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderInteractor.swift; sourceTree = "<group>"; };
@@ -387,7 +384,6 @@
 			isa = PBXGroup;
 			children = (
 				1727197222E5596100A77927 /* Controller */,
-				173CC59922E63A4600538BB3 /* Curriculum.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -561,7 +557,6 @@
 				175460B722E7B89200FE8A02 /* Localizable.strings in Resources */,
 				17F1C36022E12AF600427146 /* LaunchScreen.storyboard in Resources */,
 				17F1C35D22E12AF600427146 /* Assets.xcassets in Resources */,
-				173CC59722E63A4600538BB3 /* Curriculum.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,15 +635,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		173CC59922E63A4600538BB3 /* Curriculum.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				173CC59822E63A4600538BB3 /* Base */,
-				173CC59A22E63A8600538BB3 /* es-419 */,
-			);
-			name = Curriculum.storyboard;
-			sourceTree = "<group>";
-		};
 		175460B922E7B89200FE8A02 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -838,7 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PATH_URL = /ivanlopezglobant/1a7a475d1f2810c3953f72fa625b389e/raw/6eccc9ca1bd7a6a2eb02aa23339ae7659c7e22c4/ivan_lopez_resume.json;
+				PATH_URL = /ivanlopezglobant/1a7a475d1f2810c3953f72fa625b389e/raw/a8a571eb8a5c4349923412cf623147231a43ed60/ivan_lopez_resume.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ILA.CV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -859,7 +845,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PATH_URL = /ivanlopezglobant/1a7a475d1f2810c3953f72fa625b389e/raw/6eccc9ca1bd7a6a2eb02aa23339ae7659c7e22c4/ivan_lopez_resume.json;
+				PATH_URL = /ivanlopezglobant/1a7a475d1f2810c3953f72fa625b389e/raw/a8a571eb8a5c4349923412cf623147231a43ed60/ivan_lopez_resume.json;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ILA.CV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

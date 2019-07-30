@@ -11,8 +11,7 @@ import UIKit
 class CurriculumConfigurator {
     
     func createCurriculumModule(curriculum: Curriculum) -> CurriculumViewController {
-        let storyboard = UIStoryboard(name: AppConstants.curriculum, bundle: nil)
-        let view = storyboard.instantiateInitialViewController() as! CurriculumViewController
+        let view = CurriculumViewController()
         let presenter = CurriculumPresenter()
         let router = CurriculumRouter()
         

@@ -8,12 +8,15 @@
 
 import UIKit
 
-class CurriculumViewController: UIViewController, CurriculumViewProtocol {
+class CurriculumViewController: UITableViewController, CurriculumViewProtocol {
     
     var presenter: CurriculumPresenterProtocol?
     
-    @IBOutlet weak var contactInformationContainer: UIView?
-    @IBOutlet weak var tableView: UITableView!
+    let containerHeader: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 280))
+        view.backgroundColor = AppConstants.Color.defaultBackground
+        return view
+    }()
     
     let separator: UIView = {
         let view = UIView()
@@ -50,25 +53,20 @@ class CurriculumViewController: UIViewController, CurriculumViewProtocol {
         return label
     }()
     
-    let childContainter: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .clear
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         configureNavBar()
-        
-        contactInformationContainer?.addSubview(profileImage)
-        contactInformationContainer?.addSubview(childContainter)
-        childContainter.addSubview(profileName)
-        childContainter.addSubview(profileContact)
-        childContainter.addSubview(separator)
-        
+
+        containerHeader.addSubview(profileImage)
+        containerHeader.addSubview(profileName)
+        containerHeader.addSubview(profileContact)
+        containerHeader.addSubview(separator)
         setupContactInformationContainerontactInformationContainer()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableHeaderView = containerHeader
     }
     
     private func configureNavBar() {
@@ -86,25 +84,20 @@ class CurriculumViewController: UIViewController, CurriculumViewProtocol {
     }
     
     private func setupContactInformationContainerontactInformationContainer() {
-        guard let container = contactInformationContainer else {return}
         
-        profileImage.topAnchor.constraint(equalTo: container.topAnchor, constant: 5).isActive = true
-        profileImage.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
-        profileImage.heightAnchor.constraint(equalTo: container.heightAnchor, multiplier: 0.6).isActive = true
-        
-        childContainter.widthAnchor.constraint(equalTo: container.widthAnchor).isActive = true
-        childContainter.topAnchor.constraint(equalTo: profileImage.bottomAnchor).isActive = true
-        childContainter.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
-        
-        profileName.bottomAnchor.constraint(equalTo: childContainter.centerYAnchor, constant: -10.0).isActive = true
-        profileName.centerXAnchor.constraint(equalTo: childContainter.centerXAnchor).isActive = true
-        
-        profileContact.topAnchor.constraint(equalTo: childContainter.centerYAnchor).isActive = true
-        profileContact.centerXAnchor.constraint(equalTo: childContainter.centerXAnchor).isActive = true
-        
+        profileImage.topAnchor.constraint(equalTo: containerHeader.topAnchor, constant: 5).isActive = true
+        profileImage.centerXAnchor.constraint(equalTo: containerHeader.centerXAnchor).isActive = true
+        profileImage.heightAnchor.constraint(equalTo: containerHeader.heightAnchor, multiplier: 0.6).isActive = true
+
+        profileName.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 10.0).isActive = true
+        profileName.centerXAnchor.constraint(equalTo: containerHeader.centerXAnchor).isActive = true
+
+        profileContact.topAnchor.constraint(equalTo: profileName.bottomAnchor, constant: 10.0).isActive = true
+        profileContact.centerXAnchor.constraint(equalTo: containerHeader.centerXAnchor).isActive = true
+
         separator.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        separator.widthAnchor.constraint(equalTo: container.widthAnchor).isActive = true
-        separator.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -1).isActive = true
+        separator.widthAnchor.constraint(equalTo: containerHeader.widthAnchor).isActive = true
+        separator.bottomAnchor.constraint(equalTo: containerHeader.bottomAnchor, constant: -1).isActive = true
     }
     
     func showCV(with cv: Curriculum) {
@@ -112,30 +105,37 @@ class CurriculumViewController: UIViewController, CurriculumViewProtocol {
         profileContact.text = "\(cv.person.phoneNumber)\n\(cv.person.mail)"
         tableView.reloadData()
     }
-}
-
-extension CurriculumViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return presenter?.getNumberOfSections() ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter?.getTitleSection(at: section)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.getNumberOfRows(in: section) ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let presenter = presenter else {fatalError()}
         let sectionType = presenter.getSectionType(at: indexPath.section)
-        let cell = tableView.dequeueReusableCell(withIdentifier: sectionType.cell, for: indexPath)
+        let cell: UITableViewCell
+        
+        switch sectionType {
+        case .education, .experience:
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: sectionType.cell)
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.lineBreakMode = .byWordWrapping
+        case .language, .programmingLanguage:
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: sectionType.cell)
+        case .skill:
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: sectionType.cell)
+        }
         
         configureCell(cell: cell, sectionType: sectionType, indexPath: indexPath)
-        
         return cell
     }
     

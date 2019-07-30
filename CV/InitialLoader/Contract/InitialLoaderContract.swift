@@ -23,7 +23,7 @@ protocol InitialLoaderPresenterProtocol {
     
     //View -> Presenter
     func viewDidLoad()
-    func showCV(with cv: Curriculum, from view: UIViewController)
+    func showCurriculum(with cv: Curriculum, from view: UIViewController)
 }
 
 protocol InitialLoaderInputInteractorProtocol: class {
@@ -40,5 +40,4 @@ protocol InitialLoaderOutputInteractorProtocol: class {
 protocol InitialLoaderRouterProtocol {
     //Presenter -> Wireframe
     func pushTo(cv: Curriculum, from view: UIViewController)
-    static func createInitialLoaderModule(ref: InitialLoaderViewController)
 }

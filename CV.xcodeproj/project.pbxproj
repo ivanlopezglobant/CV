@@ -28,9 +28,11 @@
 		174457E822E24527001BBF9A /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174457E722E24527001BBF9A /* BundleExtension.swift */; };
 		175460B722E7B89200FE8A02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 175460B922E7B89200FE8A02 /* Localizable.strings */; };
 		177B369D22E8A34E002CD577 /* CVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B369C22E8A34E002CD577 /* CVUITests.swift */; };
+		17D14F8122F08A7100ECC75D /* InitialLoaderConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8022F08A7100ECC75D /* InitialLoaderConfigurator.swift */; };
+		17D14F8322F08A8900ECC75D /* CurriculumConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8222F08A8900ECC75D /* CurriculumConfigurator.swift */; };
+		17D14F8622F08A9B00ECC75D /* InfoConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D14F8522F08A9B00ECC75D /* InfoConfigurator.swift */; };
 		17DB8F4522E77B24005638AF /* CurriculumPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB8F4422E77B24005638AF /* CurriculumPresenterTest.swift */; };
 		17F1C35622E12AF300427146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F1C35522E12AF300427146 /* AppDelegate.swift */; };
-		17F1C35B22E12AF300427146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F1C35922E12AF300427146 /* Main.storyboard */; };
 		17F1C35D22E12AF600427146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17F1C35C22E12AF600427146 /* Assets.xcassets */; };
 		17F1C36022E12AF600427146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F1C35E22E12AF600427146 /* LaunchScreen.storyboard */; };
 		17FEBCAB22EF71C8006C9FFD /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FEBCAA22EF71C8006C9FFD /* Info.storyboard */; };
@@ -70,7 +72,6 @@
 		173CC59522E611F500538BB3 /* CurriculumContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumContract.swift; sourceTree = "<group>"; };
 		173CC59822E63A4600538BB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Curriculum.storyboard; sourceTree = "<group>"; };
 		173CC59A22E63A8600538BB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Curriculum.strings"; sourceTree = "<group>"; };
-		173CC59B22E63A8600538BB3 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
 		1741A6FF22E4A048008E2A90 /* CurriculumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumModel.swift; sourceTree = "<group>"; };
 		174457D422E21037001BBF9A /* InitialLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderViewController.swift; sourceTree = "<group>"; };
 		174457D622E21156001BBF9A /* InitialLoaderInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderInteractor.swift; sourceTree = "<group>"; };
@@ -84,10 +85,12 @@
 		177B369222E8A2DF002CD577 /* CVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		177B369622E8A2DF002CD577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		177B369C22E8A34E002CD577 /* CVUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVUITests.swift; sourceTree = "<group>"; };
+		17D14F8022F08A7100ECC75D /* InitialLoaderConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderConfigurator.swift; sourceTree = "<group>"; };
+		17D14F8222F08A8900ECC75D /* CurriculumConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumConfigurator.swift; sourceTree = "<group>"; };
+		17D14F8522F08A9B00ECC75D /* InfoConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoConfigurator.swift; sourceTree = "<group>"; };
 		17DB8F4422E77B24005638AF /* CurriculumPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumPresenterTest.swift; sourceTree = "<group>"; };
 		17F1C35222E12AF300427146 /* CV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F1C35522E12AF300427146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17F1C35A22E12AF300427146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17F1C35C22E12AF600427146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17F1C35F22E12AF600427146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17F1C36122E12AF600427146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,6 +206,30 @@
 			path = CVUITests;
 			sourceTree = "<group>";
 		};
+		17D14F7D22F086EA00ECC75D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				17D14F8022F08A7100ECC75D /* InitialLoaderConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		17D14F7E22F086F400ECC75D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				17D14F8222F08A8900ECC75D /* CurriculumConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		17D14F7F22F086FA00ECC75D /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				17D14F8522F08A9B00ECC75D /* InfoConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		17DB8F4022E77AD1005638AF /* Curriculum */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +303,7 @@
 		17F1C38422E12F0600427146 /* InitialLoader */ = {
 			isa = PBXGroup;
 			children = (
+				17D14F7D22F086EA00ECC75D /* Configurator */,
 				1727196D22E4DA0100A77927 /* Contract */,
 				17F1C38A22E12F6800427146 /* View */,
 				17F1C38922E12F6300427146 /* Interactor */,
@@ -288,6 +316,7 @@
 		17F1C38522E12F1D00427146 /* Curriculum */ = {
 			isa = PBXGroup;
 			children = (
+				17D14F7E22F086F400ECC75D /* Configurator */,
 				173CC59422E611E300538BB3 /* Contract */,
 				17F1C38F22E12F9A00427146 /* View */,
 				17F1C38D22E12F8D00427146 /* Presenter */,
@@ -325,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				174457D322E21006001BBF9A /* Controller */,
-				17F1C35922E12AF300427146 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +395,7 @@
 		17FEBCA522EF717A006C9FFD /* Info */ = {
 			isa = PBXGroup;
 			children = (
+				17D14F7F22F086FA00ECC75D /* Configurator */,
 				17FEBCA622EF7188006C9FFD /* Contract */,
 				17FEBCA722EF718E006C9FFD /* View */,
 				17FEBCA822EF7192006C9FFD /* Presenter */,
@@ -532,7 +561,6 @@
 				175460B722E7B89200FE8A02 /* Localizable.strings in Resources */,
 				17F1C36022E12AF600427146 /* LaunchScreen.storyboard in Resources */,
 				17F1C35D22E12AF600427146 /* Assets.xcassets in Resources */,
-				17F1C35B22E12AF300427146 /* Main.storyboard in Resources */,
 				173CC59722E63A4600538BB3 /* Curriculum.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,8 +593,11 @@
 				17FEBCB422EF7255006C9FFD /* InfoContract.swift in Sources */,
 				1727197422E5597600A77927 /* CurriculumViewController.swift in Sources */,
 				1727196322E4C91D00A77927 /* Endpoint.swift in Sources */,
+				17D14F8622F08A9B00ECC75D /* InfoConfigurator.swift in Sources */,
+				17D14F8122F08A7100ECC75D /* InitialLoaderConfigurator.swift in Sources */,
 				174457D522E21037001BBF9A /* InitialLoaderViewController.swift in Sources */,
 				17F1C35622E12AF300427146 /* AppDelegate.swift in Sources */,
+				17D14F8322F08A8900ECC75D /* CurriculumConfigurator.swift in Sources */,
 				1727196722E4CA6B00A77927 /* APIError.swift in Sources */,
 				174457D722E21156001BBF9A /* InitialLoaderInteractor.swift in Sources */,
 				1727196F22E4DA1700A77927 /* InitialLoaderContract.swift in Sources */,
@@ -625,15 +656,6 @@
 				175460BA22E7B89400FE8A02 /* es-419 */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		17F1C35922E12AF300427146 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17F1C35A22E12AF300427146 /* Base */,
-				173CC59B22E63A8600538BB3 /* es-419 */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		17F1C35E22E12AF600427146 /* LaunchScreen.storyboard */ = {

@@ -31,8 +31,6 @@ protocol CurriculumPresenterProtocol {
     func navigateToInfoView(from view: UIViewController, with person: Person)
 }
 
-protocol CurriculumRouterProtocol: AnyObject {
-    static func createCurriculumModule(ref: CurriculumViewController, curriculum: Curriculum)
-    
+protocol CurriculumRouterProtocol: AnyObject {    
     func pushInfoView(from view: UIViewController, with person: Person)
 }

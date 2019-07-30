@@ -18,7 +18,7 @@ final class InitialLoaderPresenter: InitialLoaderPresenterProtocol {
         interactor?.getCurriculum()
     }
     
-    func showCV(with cv: Curriculum, from view: UIViewController) {
+    func showCurriculum(with cv: Curriculum, from view: UIViewController) {
         router?.pushTo(cv: cv, from: view)
     }
 }

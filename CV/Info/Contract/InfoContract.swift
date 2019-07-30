@@ -28,5 +28,5 @@ protocol InfoPresenterProtocol {
 }
 
 protocol InfoRouterProtocol {
-    static func createInfoModule(ref: InfoViewController, person: Person)
+    
 }

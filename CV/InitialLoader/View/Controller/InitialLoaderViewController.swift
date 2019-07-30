@@ -37,7 +37,7 @@ class InitialLoaderViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(AppConstants.tryAgain, for: .normal)
         button.backgroundColor = AppConstants.Color.secondary
-        button.setTitleColor(AppConstants.Color.whiteColor, for: .normal)
+        button.setTitleColor(AppConstants.Color.white, for: .normal)
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(didTapTryAgain), for: .touchUpInside)
         button.isHidden = true
@@ -51,12 +51,12 @@ class InitialLoaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = AppConstants.Color.white
         view.addSubview(activityIndicator)
         view.addSubview(descriptionLabel)
         view.addSubview(tryAgain)
         setupLayout()
         
-        InitialLoaderRouter.createInitialLoaderModule(ref: self)
         presenter?.viewDidLoad()
     }
     
@@ -90,7 +90,7 @@ extension InitialLoaderViewController: InitialLoaderViewProtocol {
             activityIndicator.stopAnimating()
         case .successfullyFinish:
             guard let cv = cv else {return}
-            presenter?.showCV(with: cv, from: self)
+            presenter?.showCurriculum(with: cv, from: self)
         }
     }
 }

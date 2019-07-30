@@ -9,21 +9,8 @@
 import UIKit
 
 class CurriculumRouter: CurriculumRouterProtocol {
-    class func createCurriculumModule(ref: CurriculumViewController, curriculum: Curriculum) {
-        let presenter = CurriculumPresenter()
-        let router = CurriculumRouter()
-        
-        presenter.cv = curriculum
-        presenter.view = ref
-        presenter.router = router
-        ref.presenter = presenter
-    }
-    
     func pushInfoView(from view: UIViewController, with person: Person) {
-        let storyboard = UIStoryboard(name: "Info", bundle: nil)
-        let infoVC = storyboard.instantiateInitialViewController() as! InfoViewController
-        InfoRouter.createInfoModule(ref: infoVC, person: person)
-        
-        view.navigationController?.pushViewController(infoVC, animated: true)
+        let infoView = InfoConfigurator().createInfoModule(person: person)
+        view.navigationController?.pushViewController(infoView, animated: true)
     }
 }

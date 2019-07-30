@@ -68,7 +68,7 @@ class CurriculumViewController: UIViewController, CurriculumViewProtocol {
         childContainter.addSubview(profileContact)
         childContainter.addSubview(separator)
         
-        setupCcontactInformationContainerontactInformationContainer()
+        setupContactInformationContainerontactInformationContainer()
     }
     
     private func configureNavBar() {
@@ -85,7 +85,7 @@ class CurriculumViewController: UIViewController, CurriculumViewProtocol {
         presenter?.navigateToInfoView(from: self, with: person)
     }
     
-    private func setupCcontactInformationContainerontactInformationContainer() {
+    private func setupContactInformationContainerontactInformationContainer() {
         guard let container = contactInformationContainer else {return}
         
         profileImage.topAnchor.constraint(equalTo: container.topAnchor, constant: 5).isActive = true

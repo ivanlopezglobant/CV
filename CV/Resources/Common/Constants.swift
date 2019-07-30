@@ -18,7 +18,8 @@ enum AppConstants {
     enum Color {
         static let main = #colorLiteral(red: 0.0227721706, green: 0.3414700627, blue: 0.3582882881, alpha: 1)
         static let secondary = #colorLiteral(red: 0.3996318579, green: 0.6436505914, blue: 0.6731247306, alpha: 1)
-        static let whiteColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        static let white = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        static let defaultBackground = #colorLiteral(red: 0.921494782, green: 0.9216086268, blue: 0.9214690328, alpha: 1)
     }
 }
 

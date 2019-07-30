@@ -8,15 +8,5 @@
 
 import UIKit
 
-class InfoRouter: InfoRouterProtocol {
-    
-    static func createInfoModule(ref: InfoViewController, person: Person) {
-        let presenter = InfoPresenter()
-        let router = InfoRouter()
-        presenter.router = router
-        presenter.view = ref
-        presenter.person = person
-        ref.presenter = presenter
-        
-    }
+class InfoRouter: InfoRouterProtocol { 
 }

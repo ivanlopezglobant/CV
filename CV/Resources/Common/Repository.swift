@@ -8,6 +8,23 @@
 
 import Foundation
 
+enum CurriculumFeed {
+    case resume
+}
+extension CurriculumFeed: Endpoint {
+    
+    var base: String {
+        return KeyNetwork.baseURL
+    }
+    
+    var path: String {
+        switch self {
+        case .resume: return KeyNetwork.pathURL
+        }
+    }
+}
+
+
 class Respository<T> : Network where T:Decodable {
     var session: URLSession
     var data: T?
@@ -21,10 +38,10 @@ class Respository<T> : Network where T:Decodable {
         if data != nil {
             completion(.success(data))
         } else {
-            fetch(with: feedType.request, decode: {[weak self] (json) -> T? in
+            fetch(with: feedType.request, decode: {(json) -> T? in
                 guard let curriculumData = json as? T else {return nil}
-                self?.data = curriculumData
-                return self?.data
+                self.data = curriculumData
+                return self.data
                 }, completion: completion)
         }
     }

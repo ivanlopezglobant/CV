@@ -10,7 +10,6 @@
 		1727196322E4C91D00A77927 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196222E4C91D00A77927 /* Endpoint.swift */; };
 		1727196522E4C96300A77927 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196422E4C96300A77927 /* Result.swift */; };
 		1727196722E4CA6B00A77927 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196622E4CA6B00A77927 /* APIError.swift */; };
-		1727196A22E4CAF500A77927 /* CurriculumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196922E4CAF500A77927 /* CurriculumRepository.swift */; };
 		1727196C22E4CFCB00A77927 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196B22E4CFCB00A77927 /* Repository.swift */; };
 		1727196F22E4DA1700A77927 /* InitialLoaderContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727196E22E4DA1700A77927 /* InitialLoaderContract.swift */; };
 		1727197422E5597600A77927 /* CurriculumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1727197322E5597600A77927 /* CurriculumViewController.swift */; };
@@ -64,7 +63,6 @@
 		1727196222E4C91D00A77927 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1727196422E4C96300A77927 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1727196622E4CA6B00A77927 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		1727196922E4CAF500A77927 /* CurriculumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumRepository.swift; sourceTree = "<group>"; };
 		1727196B22E4CFCB00A77927 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		1727196E22E4DA1700A77927 /* InitialLoaderContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLoaderContract.swift; sourceTree = "<group>"; };
 		1727197322E5597600A77927 /* CurriculumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewController.swift; sourceTree = "<group>"; };
@@ -128,14 +126,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1727196822E4CAE300A77927 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				1727196922E4CAF500A77927 /* CurriculumRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		1727196D22E4DA0100A77927 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,7 +376,6 @@
 		17F1C38C22E12F8100427146 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1727196822E4CAE300A77927 /* Repository */,
 				1741A6FF22E4A048008E2A90 /* CurriculumModel.swift */,
 			);
 			path = Entity;
@@ -604,7 +593,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				174457DB22E211E2001BBF9A /* InitialLoaderRouter.swift in Sources */,
-				1727196A22E4CAF500A77927 /* CurriculumRepository.swift in Sources */,
 				174457D922E2118A001BBF9A /* InitialLoaderPresenter.swift in Sources */,
 				17FEBCB422EF7255006C9FFD /* InfoContract.swift in Sources */,
 				1727197422E5597600A77927 /* CurriculumViewController.swift in Sources */,

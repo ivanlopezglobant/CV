@@ -13,7 +13,7 @@ class InitialLoaderInteractor: InitialLoaderInputInteractorProtocol {
     weak var presenter: InitialLoaderOutputInteractorProtocol?
     
     func getCurriculum() {
-        let repository: Respository<Curriculum> = CurriculumRepository.shared
+        let repository = Respository<Curriculum>()
         
         repository.getData(from: .resume) { result in
             self.presenter?.curriculumDidFetch(response: result)

@@ -163,7 +163,6 @@
 			children = (
 				174457E622E2450F001BBF9A /* Extension */,
 				174457E122E23E4C001BBF9A /* Constants.swift */,
-				1727196B22E4CFCB00A77927 /* Repository.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 				1727196222E4C91D00A77927 /* Endpoint.swift */,
 				1727196422E4C96300A77927 /* Result.swift */,
 				1727196622E4CA6B00A77927 /* APIError.swift */,
+				1727196B22E4CFCB00A77927 /* Repository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";

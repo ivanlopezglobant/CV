@@ -14,6 +14,7 @@ enum AppConstants {
     static let current = NSLocalizedString("Current", comment: "Actual Time")
     static let tryAgain = NSLocalizedString("Try again", comment: "Try do something again")
     static let years = NSLocalizedString("years", comment: "Years old of a person")
+    static let personalInformation = NSLocalizedString("Personal Information", comment: "Personal information of the CV owner")
     
     enum Color {
         static let main = #colorLiteral(red: 0.0227721706, green: 0.3414700627, blue: 0.3582882881, alpha: 1)

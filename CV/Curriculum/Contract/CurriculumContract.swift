@@ -27,6 +27,7 @@ protocol CurriculumPresenterProtocol {
     func getNumberOfRows(in section: Int) -> Int
     func getDataCell(at indexPath: IndexPath) -> Decodable
     func getPerson() -> Person?
+    func getCV() -> String?
     
     func navigateToInfoView(from view: UIViewController, with person: Person)
 }

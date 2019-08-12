@@ -53,3 +53,6 @@
 
 /* Actual Time */
 "Current" = "Actual";
+
+/* Personal information of the CV owner */
+"Personal Information" = "Información Personal";

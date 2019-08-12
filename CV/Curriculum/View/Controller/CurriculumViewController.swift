@@ -75,7 +75,15 @@ class CurriculumViewController: UITableViewController, CurriculumViewProtocol {
         navigationController?.navigationBar.barStyle = .blackTranslucent
         let info = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(infoTapped))
         self.navigationItem.rightBarButtonItem  = info
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(didTapSharedCV))
         title = AppConstants.curriculum
+    }
+    
+    @objc private func didTapSharedCV(){
+        guard let data = presenter?.getCV() else {return}
+        
+        let activityController = UIActivityViewController(activityItems: [data], applicationActivities: [])
+        present(activityController, animated: true)
     }
     
     @objc private func infoTapped() {

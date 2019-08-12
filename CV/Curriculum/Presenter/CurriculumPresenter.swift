@@ -67,6 +67,53 @@ class CurriculumPresenter: CurriculumPresenterProtocol {
         return cv?.person
     }
     
+    func getCV() -> String? {
+        var mycv = [String]()
+        
+        guard let cv = cv else {return nil}
+        mycv.append("\(cv.person.firstName) \(cv.person.lastName)'s \(AppConstants.curriculum)")
+        mycv.append("\n\(AppConstants.personalInformation):")
+        mycv.append("\(cv.person.firstName) \(cv.person.lastName)")
+        mycv.append("\(cv.person.city) - \(cv.person.country)")
+        mycv.append(cv.person.mail)
+        mycv.append(cv.person.phoneNumber)
+        
+        mycv.append("\n\(CVSections.education.description):")
+        for education in cv.education {
+            mycv.append(education.name)
+            mycv.append(education.degree)
+            let endDate = education.endDate ?? "\(AppConstants.current)"
+            mycv.append("\(education.startDate) - \(endDate)\n")
+        }
+        
+        mycv.append("\n\(CVSections.experience.description):")
+        for experience in cv.experience {
+            mycv.append(experience.name)
+            mycv.append(experience.role)
+            let endDate = experience.endDate ?? "\(AppConstants.current)"
+            mycv.append("\(experience.startDate) - \(endDate)\n")
+        }
+        
+        mycv.append("\n\(CVSections.skill.description):")
+        for skill in cv.skills {
+            mycv.append(skill.name)
+        }
+        
+        mycv.append("\n\(CVSections.language.description):")
+        for language in cv.languages {
+            mycv.append("\(language.name) - \(language.level)")
+        }
+        
+        mycv.append("\n\(CVSections.programmingLanguage.description):")
+        for language in cv.programmingLanguages {
+            mycv.append("\(language.name) - \(language.duration)")
+        }
+        
+        let result  = mycv.joined(separator: "\n")
+        
+        return result
+    }
+    
     func navigateToInfoView(from view: UIViewController, with person: Person) {
         router?.pushInfoView(from: view, with: person)
     }

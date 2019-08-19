@@ -11,13 +11,15 @@ import Foundation
 /// Protocol to create EndPoints
 protocol Endpoint {
     var base: String { get }
-    var path: String { get }
+    var path: String? { get }
 }
 extension Endpoint {
 
     private var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
-        components.path = path
+        if path != nil {
+            components.path = path!
+        }
         return components
     }
     

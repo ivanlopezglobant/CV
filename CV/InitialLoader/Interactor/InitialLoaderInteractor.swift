@@ -15,7 +15,7 @@ class InitialLoaderInteractor: InitialLoaderInputInteractorProtocol {
     func getCurriculum() {
         let repository = Respository<Curriculum>()
         
-        repository.getData(from: .resume) { result in
+        repository.getData(from: CurriculumFeed.resume) { result in
             self.presenter?.curriculumDidFetch(response: result)
         }
     }

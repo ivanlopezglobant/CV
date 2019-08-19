@@ -17,7 +17,7 @@ extension CurriculumFeed: Endpoint {
         return KeyNetwork.baseURL
     }
     
-    var path: String {
+    var path: String? {
         switch self {
         case .resume: return KeyNetwork.pathURL
         }
@@ -33,7 +33,7 @@ class Respository<T> : Network where T:Decodable {
         self.session = URLSession(configuration: configuration)
     }
     
-    func getData(from feedType: CurriculumFeed, completion: @escaping (Result<T?, APIError>) -> Void) {
+    func getData(from feedType: Endpoint, completion: @escaping (Result<T?, APIError>) -> Void) {
         
         if data != nil {
             completion(.success(data))
